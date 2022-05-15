@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm"
+import { Project } from "./Project"
 
 @Entity()
 export class User {
@@ -19,7 +20,9 @@ export class User {
     })
     username: string
     
-    @Column()
+    @Column({
+        unique: true
+    })
     email: string
 
     @Column()
@@ -30,4 +33,7 @@ export class User {
 
     @Column()
     website: string
+
+    @OneToMany(() => Project, (project) => project.user)
+    project: Project[]
 }

@@ -2,10 +2,15 @@ import {Request, Response, Router} from 'express'
 import { UserController } from '../app/controller/UserController'
 import { User } from '../app/entity/User'
 
+//import Router function from Express
 const routerUser = Router()
 
+
+//import controller class
 const usercontroller = new UserController()
 
+
+//test of route
 try {
     routerUser.get('/', (req: Request, res: Response) => {
         res.json({message: "Route of User OK"})
@@ -14,6 +19,8 @@ try {
     console.log(error)
 }
 
+
+//Create new User
 try {
     routerUser.post('/register', async (req: Request, res: Response) => {
         const {username, email, password, bio, website} = req.body
@@ -26,6 +33,8 @@ try {
     console.log(error)
 }
 
+
+//list All Users
 try {
     routerUser.get('/users', async (req: Request, res: Response) => {
         const users = await usercontroller.getAll()
