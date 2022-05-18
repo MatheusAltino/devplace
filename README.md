@@ -12,6 +12,7 @@ Steps to run this project:
 Um serviço que conecta desenvolvedores através de exposição de projetos.
 Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários da aplicação.
 
+
 - Database
     - mysql
 
@@ -44,3 +45,29 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
 - Apresentação
     - repositório GIT
     - README com informações de como baixar, instalar e utilizar o sistema
+
+
+## Execução do Projeto
+
+- Requisitos
+    - nodejs instalado na máquina
+
+    - gerenciador de pacotes NPM
+
+    - docker desktop com compose para rodar os containers configurados no docker-compose
+
+- Possíveis problemas
+
+    - Necessidade de configurar o arquivo data-source.ts, com ele o banco de dados se conecta com o container docker.
+
+    - Alguma incompatibilidade de portas entre o docker e a máquina, para isso basta configurar o arquivo docker-compose.yml
+
+- Principais Comandos
+
+    - git-clone https://github.com/MatheusAltino/devplace.git . {Clona o repositório no GitHub}
+
+    - npm i {Instala as dependencias do projeto}
+
+    - docker-compose up -d {Sobe os containers configurados em docker-compose.yml}
+    
+    - npm start {Start na api}
