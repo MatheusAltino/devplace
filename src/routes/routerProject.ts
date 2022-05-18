@@ -4,6 +4,7 @@ import ProjectController from "../app/controller/ProjectController"
 import { UserController } from "../app/controller/UserController"
 import { AppDataSource } from "../database/data-source"
 import { parse } from "path"
+import authMiddleware from "../app/middlewares/authMiddleware"
 
 //import Router function from Express
 export const routerProject = Router()
@@ -26,7 +27,7 @@ try {
 
 //create new project with getByUsername
 try {
-    routerProject.post('/create', async(req: Request, res: Response) => {
+    routerProject.post('/create', authMiddleware, async(req: Request, res: Response) => {
         const {name, stack, description, link, username} = req.body
         const user = await usercontroller.getByUsername(username)
         if(!user){
@@ -45,7 +46,7 @@ try {
 
 //list all projects
 try {
-    routerProject.get('/projects', async(req: Request, res: Response) => {
+    routerProject.get('/projects', authMiddleware, async(req: Request, res: Response) => {
         const projects = await projectcontroller.getAll()
 
         res.json(projects)
@@ -57,7 +58,7 @@ try {
 
 //list all projects of one user
 try {
-    routerProject.post('/userprojects', async(req: Request, res: Response) => {
+    routerProject.post('/userprojects', authMiddleware, async(req: Request, res: Response) => {
         const {username} = req.body
         const projects = await usercontroller.getAllOfOne(username)
 
@@ -70,7 +71,7 @@ try {
 
 //delete project
 try {
-    routerProject.post('/delete', async(req: Request, res: Response) => {
+    routerProject.post('/delete', authMiddleware, async(req: Request, res: Response) => {
         const {username, name} = req.body
         const project = await projectcontroller.remove(username, name)
 
@@ -83,7 +84,7 @@ try {
 
 //update project
 try {
-    routerProject.post('/update', async(req: Request, res: Response) => {
+    routerProject.post('/update', authMiddleware, async(req: Request, res: Response) => {
         const { username, name, stack, description, link, nName, nStack, nDescription, nLink} = req.body
         const project = await projectcontroller.updateName(
             username, 
@@ -94,7 +95,8 @@ try {
             nName, 
             nStack, 
             nDescription, 
-            nLink)
+            nLink
+        )
         
         return res.status(201).json({message: "Project updated with sucess!"})
     })
