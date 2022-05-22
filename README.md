@@ -17,15 +17,15 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
     - mysql
 
 - Backend
-    - Develop {id, name, email, password }
+    - Develop {id, name, email, password, bio, website, projects[] }
         - Registro
         - Login
 
-    - Produto {id, name, description, palavras-chave[], github}
-        - cadastro de produto
-        - update de produto
-        - listagem de produtos
-        - mostragem de produto
+    - Projeto {id, name, stack, description, link}
+        - cadastro de projeto
+        - update de projeto
+        - listagem de projeto
+        - mostragem de projeto
 
     - autenticação via jwt
         - middleware de restrição de acesso às informações caso não esteja logado
@@ -36,10 +36,10 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
         - login
 
     - Produto
-        - cadastro de produto
-        - listagem de produtos
-        - mostragem de produto
-        - update de produto
+        - cadastro de projeto
+        - listagem de projeto
+        - mostragem de projeto
+        - update de projeto
 
 
 - Apresentação
