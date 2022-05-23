@@ -64,7 +64,7 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
 
 - Principais Comandos
 
-    - git-clone https://github.com/MatheusAltino/devplace.git . {Clona o repositório no GitHub}
+    - git clone https://github.com/MatheusAltino/devplace.git . {Clona o repositório no GitHub}
 
     - npm i {Instala as dependencias do projeto}
 
