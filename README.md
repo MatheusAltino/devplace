@@ -70,7 +70,7 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
 
     - docker-compose up -d {Sobe os containers configurados em docker-compose.yml}
     
-    - npm run dev {Start na api, o npm start tem apresentado conflito de portas, apesar de ser o mesmo código que o dev}
+    - npm run dev {Start na api}
 
 -----------------------------
 ## Imagens
