@@ -71,3 +71,13 @@ Cada desenvolvedor cadastra seus projetos para ser exposto aos demais usuários 
     - docker-compose up -d {Sobe os containers configurados em docker-compose.yml}
     
     - npm run dev {Start na api, o npm start tem apresentado conflito de portas, apesar de ser o mesmo código que o dev}
+
+-----------------------------
+## Imagens
+![createUser](https://user-images.githubusercontent.com/83050247/169723122-a57bf44d-5b57-461f-8249-1cf7decdeb81.png)
+![listUsers](https://user-images.githubusercontent.com/83050247/169722620-130b2df0-cf35-4303-921d-8e578a91500a.png)
+![auth](https://user-images.githubusercontent.com/83050247/169722777-60a1e7f2-5e72-4bb1-800d-7b1aeac71bf4.png)
+![createProject](https://user-images.githubusercontent.com/83050247/169723020-62c74bc7-a278-47a6-a6c4-ce404d119fb9.png)
+![listProjects](https://user-images.githubusercontent.com/83050247/169722836-adef1b8a-55ec-49a0-a3b8-c1e8f3bfd665.png)
+![updateProject](https://user-images.githubusercontent.com/83050247/169722973-283ac5a6-2f59-4842-aa0f-cc590b125ae9.png)
+![deleteProject](https://user-images.githubusercontent.com/83050247/169723268-c11423bc-bfe4-41b6-972b-1261ce5cdba7.png)
